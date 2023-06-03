@@ -41,6 +41,7 @@ class TemperatureConverter
 
         if (!double.TryParse(userInput.Substring(0, userInput.Length - 1), out temperature))
         {
+            Console.WriteLine("Cannot convert the temperature!");
             return false;
         }
 
@@ -48,6 +49,7 @@ class TemperatureConverter
 
         if (unit != 'F' && unit != 'C')
         {
+            Console.WriteLine("The unit of measurements must be F or C!");
             return false;
         }
 
